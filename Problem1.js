@@ -1,6 +1,6 @@
 
 function totalFine( fare ) {
-   if (fare< 0 || fare !==Number(fare)) {
+   if (fare< 0 || typeof fare !=="number") {
       return "Invalid";
    }
 
@@ -11,5 +11,25 @@ function totalFine( fare ) {
    }
 
 }
+// console.log(totalFine( -35)); 
 
-console.log(totalFine( 200)); 
+//Problem 2
+
+function  onlyCharacter( str ) {
+    if (typeof str !== "string") {
+        return "Invalid";
+    }
+    
+    let result = "";
+    for (let i = 0; i < str.length; i++) {
+         if (str[i] === " ") {
+            continue;
+        }
+        val1 = str[i].toUpperCase();
+        result += val1;
+        
+    }
+    return result;
+        
+}
+// console.log(onlyCharacter( true));
